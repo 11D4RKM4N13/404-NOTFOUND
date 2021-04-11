@@ -1,7 +1,21 @@
 <template>
-  <div class="notfound">
-    <h2>404</h2>
-    <h2>404</h2>
+  <div class="content">
+    
+    <p>
+      OPPSS! PAGE NOT FOUND!
+    </p>
+
+    <div class="notfound">
+      <h2>404</h2>
+      <h2>404</h2>
+    </div>
+
+    <div class="Button">
+      <a href="#">
+        {{Button}}
+      </a>
+    </div>
+    
   </div>
 </template>
 
@@ -12,7 +26,8 @@ export default {
   name: 'App',
   data(){
     return{
-      Titulo: 'OPPS! LOOKS LIKE YOU ARE LOST!'
+      Titulo: 'OPPS! LOOKS LIKE YOU ARE LOST!',
+      Button: 'GO BACK'
     }
   }
 }
@@ -22,12 +37,14 @@ export default {
 
 /*Imports*/
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frijole&display=swap');
 
 *{
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
-  font-family: 'Orbitron', sans-serif;
+  /*font-family: 'Orbitron', sans-serif;*/
+  font-family: 'Frijole', cursive;
 }
 
 body{
@@ -35,7 +52,6 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: black;
   background-image: url("assets/deepsea.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -77,6 +93,39 @@ body{
       67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%      
     );
   }
+}
+
+.content .Button{
+  position: absolute;
+  bottom: 5%;
+  left: 43.5%;
+}
+
+.content .Button a{
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #2196f3;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 25px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.content .Button a:hover{
+  color: #255784;
+  background: #2196f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+}
+
+.content p{
+  position: absolute;
+  top: 60%;
+  left: 35%;
+  color: #03a9f4;
+  font-size: 30px;
 }
 
 </style>
